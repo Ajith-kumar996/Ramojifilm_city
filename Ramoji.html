@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ramoji Film City Hyderabad</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+
+    <style>
+        .nav-item a {
+            color:purple;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .btnskew .btn{
+            width:auto;
+            height:25px;
+            text-align: center;
+            line-height: 12px;
+        }
+
+        .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+} 
+
+        .searchicon i {
+            color: green;
+            font-size: 22px;
+        }
+
+        .togglesearch {
+            position: absolute;
+            width: 350px;
+            height: 60px;
+            top: 09px;
+            display: none;
+
+        }
+
+        .searchclose i {
+            background-color: red;
+            color: white;
+            font-size: 23px;
+            border: 3px solid red;
+        }
+
+
+        .ticketbtn {
+            padding-left: 10px;
+        }
+
+        .btnskew{
+
+            transform: skewX(30deg);
+        }
+
+        .btnskew {
+
+            transform: skewX(30deg);
+        }
+
+
+
+        .hrdesign {
+            border-top: 2px solid red;
+            width: 10%;
+            transition: width 2s;
+        }
+
+        .hrdesign:hover {
+            width: 30%;
+        }
+
+
+
+        .carousel-inner img {
+            width:100%;
+            height: 100%;
+        }
+
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+
+        .col-sm-3 img {
+            transition: transform .2s;
+        }
+
+        .col-sm-3 img:hover {
+            transform: scale(1.05);
+        }
+
+        #readmore {
+            display: none;
+        }
+
+        .bg-overlay {
+            background-image: linear-gradient(rgba(26, 21, 24, 0), rgba(14, 1, 9, 1)), url("testmonial.jpg");
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .reviewslist p {
+            color: white;
+            text-align: center;
+            padding: 0px 50px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .reviewslist h4 {
+            color: yellow;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .reviewslist h6 {
+            color: white;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .prenexticon .carousel-control-next,
+        .prenexticon .carousel-control-prev {
+            bottom: unset !important;
+        }
+
+        .prenexticon .carousel-control-next-icon,
+        .prenexticon .carousel-control-prev-icon {
+            border: 3px solid green;
+            border-radius: 50px;
+            padding: 20px;
+            background-color: green;
+        }
+    </style>
+
+    <script>
+        function myfunction() {
+            var x = document.getElementById("toggle")
+            x.style.display = "inline";
+        }
+
+
+        function searchclosefunction() {
+            var a = document.getElementById("toggle");
+            a.style.display = "none";
+        }
+
+
+
+        function readtext() {
+            var i = document.getElementById("readmore");
+            if (i.style.display == "none") {
+                i.style.display = "inline-block";
+                document.getElementById("read").innerHTML = "Read Less";
+
+            } else {
+                i.style.display = "none";
+                document.getElementById("read").innerHTML = "Read more";
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top bg-light">
+        <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src=" logo-r.png" width="163"> </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon">
+        
+    </span>
+  </button>
+
+
+            <div class="col mt-3">
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MEETINGS & EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">WEDDINGS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FILM MAKERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SAHAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT US</a>
+                    </li>
+                    <li class="search">
+                        <a class="searchicon" href="javascript:myfunction()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                        <div id="toggle" class="togglesearch">
+                            <form class="form-inline">
+                                <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search..." aria-label="Search">
+        <div class="input-group-append">
+       <a class="searchclose" href="javascript:searchclosefunction()">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </a>
+
+          
+                                
+                                
+                            </form>
+
+                        </div>
+                    </li>
+
+                    <li class="ticketbtn">
+                        <a href="#" class="btn btn-danger"> Tickets</a>
+                    </li>
+                </ul>
+            </div>
+    
+
+                <ul class="navbar-nav">
+                    <li class="btnskew">
+
+                        <a href="#" class="btn btn-success btn-xs"> FILM CITY TOUR </a>
+
+                    </li>
+                    <li class="btnskew">
+                        <a href="#" class="btn btn-danger btn-xs"> HOTELS </a>
+                    </li>
+                    <li class="btnskew">
+                        <a href="#" class="btn btn-warning btn-xs"> TRAVEL AGENTS </a>
+                    </li>
+                    <li class="btnskew">
+                        <a href="#"><button type="button" class="btn btn-primary btn-xs"> SUKHIBHAVA - WELLNESS
+                                <span class="badge badge-pill badge-warning"> New </span></button>
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src=" image1.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src=" image2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src=" image3.jpeg">
+            </div>
+            <div class="carousel-item">
+                <img src=" image4.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src=" image5.jpeg">
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-secondary"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon bg-secondary"></span>
+        </a>
+    </div>
+
+    <div class="container">
+        <h3 style="text-align:center; color:gray; margin-top:50px;"> HOLIDAY EXPERIENCES </h3>
+        <hr class="hrdesign">
+
+        <div class="row">
+            <div class="col">
+                <div class="card card-body">
+
+                    <img src=" exp1.jpg" width="240px"
+                        height="120px">
+                    <h5>FILM CITY TOUR</h5>
+                    <p>Tour behind the scenes of the Live Film Studio to explore Tollywood & Bollywood’s
+                        most famous back-lot in the world’s largest Film City.</p>
+
+                    <button type="button" class="btn btn-outline-success" style="width:max-content"> Start
+                        Tour&#8594;</button>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-body">
+
+                    <img src=" exp1.jpg" width="240px"
+                        height="120px">
+                    <h5>FILM CITY TOUR</h5>
+                    <p>Tour behind the scenes of the Live Film Studio to explore Tollywood & Bollywood’s
+                        most famous back-lot in the world’s largest Film City.</p>
+
+                    <button type="button" class="btn btn-outline-primary" style="width:max-content"> Book
+                        Hotel&#8594;</button>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card card-body">
+
+                    <img src=" exp1.jpg" width="240px"
+                        height="120px">
+
+                    <h5>FILM CITY TOUR</h5>
+                    <p>Tour behind the scenes of the Live Film Studio to explore Tollywood & Bollywood’s
+                        most famous back-lot in the world’s largest Film City.</p>
+
+                    <button type="button" class="btn btn-outline-danger" style="width:max-content; "> Start
+                        Adventure&#8594; </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <h3 style="text-align:center; color:grey; margin-top:50px;"> OUR SERVICES </h3>
+            <hr class="hrdesign">
+            <div class="row">
+                <div class="col">
+                    <h4 style="background-color: hotpink; width:max-content; color:white; border-radius:15px"> WEDDINGS
+                    </h4>
+                    <a href="#">
+                        <div id="wedding" class="carousel slide" data-ride="carousel"
+                            style="border:2px solid; padding:5px">
+                            <ul class="carousel-indicators" style="top:20px">
+                                <li data-target="#wedding" data-slide-to="0" class="active"></li>
+                                <li data-target="#wedding" data-slide-to="1"></li>
+                                <li data-target="#wedding" data-slide-to="2"></li>
+                                <li data-target="#wedding" data-slide-to="3"></li>
+                            </ul>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src=" wedding-1.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" wedding-2.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" wedding-3.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" wedding-4.jpg">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#wedding" data-slide="prev">
+                                <span class="carousel-control-prev-icon bg-secondary"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#wedding" data-slide="next">
+                                <span class="carousel-control-next-icon bg-secondary"></span>
+                            </a>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col">
+                    <h4 style="background-color:blue; width:max-content; color:white; border-radius:15px"> CORPORATE
+                        EVENTS
+                        & MEETINGS</h4>
+                    <a href="#">
+                        <div id="events" class="carousel slide" data-ride="carousel"
+                            style="border:2px solid; padding:5px">
+                            <ul class="carousel-indicators" style="top:20px">
+                                <li data-target="#events" data-slide-to="0" class="active"></li>
+                                <li data-target="#events" data-slide-to="1"></li>
+                                <li data-target="#events" data-slide-to="2"></li>
+                                <li data-target="#events" data-slide-to="3"></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img
+                                        src=" events-1.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" events-2.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" events-3.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                        src=" events-4.jpg">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#events" data-slide="prev">
+                                <span class="carousel-control-prev-icon bg-secondary"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#events" data-slide="next">
+                                <span class="carousel-control-next-icon bg-secondary"></span>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="row mt-3">
+                <div class="col">
+
+                    <h4 style="background-color:purple; width:fit-content; color:white; border-radius:15px"> RAMOJI
+                        DIARIES
+                    </h4>
+                    <a href="#"><img src=" ramoji.jpg"
+                            width="535px" style="border:2px solid; padding:5px"></a>
+
+                </div>
+
+                <div class="col">
+
+                    <h4 style="background-color: orangered; width:max-content; color:white; border-radius:15px"> ONLINE
+                        BOOKING (THROUGH MOBILE APP)</h4>
+                    <a href="#">
+                        <img src=" book-online1.jpg"
+                            width="535px" style="border:2px solid; padding:5px"></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 style="text-align:center; color:grey; margin-top:30px;"> GALLERY </h3>
+        <hr class="hrdesign">
+
+        <div class="row mt-4">
+            <div class="col-sm-3">
+                <img src=" gallery1.jpg">
+            </div>
+
+            <div class="col-sm-3">
+                <img src=" gallery2.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery3.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery4.jpg">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-3">
+                <img src=" gallery5.jpg">
+            </div>
+
+            <div class="col-sm-3">
+                <img src=" gallery6.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery7.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery8.jpg">
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-3">
+                <img src=" gallery8.jpg">
+            </div>
+
+            <div class="col-sm-3">
+                <img src=" gallery3.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery9.jpg">
+            </div>
+            <div class="col-sm-3">
+                <img src=" gallery10.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <h3 style="text-align:center; color:grey; margin-top:30px;"> RAMOJI FILM CITY </h3>
+            <hr class="hrdesign">
+            <p>Ramoji Film City is India’s only thematic holiday destination with cine-magic. Certified as the World’s
+                Largest Film Studio complex by Guinness World Records,
+                it spreads across 2000 acres. Millions of tourists visit the amusement park to live their dream
+                vacation.
+                It is a perfect getaway and theme park that stimulates the mind and heart alike....<span id="readmore">
+                    A comprehensive, fun entertainment and leisure hub, Ramoji Film City is a special engagement with
+                    the
+                    magic
+                    of cinema whose heavenly charm is unravelled in every element, including breath-taking avenues,
+                    landscapes,
+                    make-believe locales and unlimited fun and entertainment options. Plan for a wonderful vacation,
+                    Film
+                    City
+                    Tour to experience the excitement of enthralling film studio complex - Ramoji Film City. Stay with
+                    us to
+                    get
+                    a deeper insight into the world of filmmaking. Avail customized stay packages offering great value
+                    discounts
+                    exclusively for Winter Carnival and New Year Celebrations. Ramoji Film City offers diverse stay
+                    options
+                    ranging from luxury to shared accommodation. Sitara – the 4-star Luxury Hotel, Tara - the 3 Star
+                    Comfort
+                    Hotel, Shantiniketan – the best service apartment and Vasundhara Villa – farm house accommodation -
+                    ideal
+                    for family stay, Hotel Greens Inn offering stay amidst the serene nature and Hotel Sahara providing
+                    shared
+                    accommodation with separate blocks for boys and girls, make excellent group stay.</span>
+                <span> <a href="javascript:readtext()" id="read"> Read more </a></span>
+
+            </p>
+
+
+        </div>
+    </div>
+    <div class="container-fluid bg-overlay">
+        <h3 style="text-align:center; color:blueviolet; margin-top:30px;"> TESTIMONIALS </h3>
+        <hr class="hrdesign">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="utubelink" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <iframe width="600" height="315" src="https://www.youtube.com/embed/JqjeZp6R6Bo"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe width="600" height="315" src="https://www.youtube.com/embed/JNvGDd1Fa3o"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe width="600" height="315" src="https://www.youtube.com/embed/JNvGDd1Fa3o"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <iframe width="600" height="315" src="https://www.youtube.com/embed/07LvOOb1zoc"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#utubelink" data-slide="prev">
+                            <span class="carousel-control-prev-icon bg-secondary"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#utubelink" data-slide="next">
+                            <span class="carousel-control-next-icon bg-secondary"></span>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col-sm-6">
+                    <div id="reviews" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="reviewslist">
+                                <div class="carousel-item active">
+                                    <h4> "2018 Ramoji Visit" </h4>
+                                    <p> "
+                                        I had really great experience over here. This is the largest film studio all
+                                        over the world. It holds the Guinness book record as a largest film studio and
+                                        with the large number of sound stages. Even the Air-conditioned hotels and
+                                        restaurants are built in it. The hotel Tara and Sitara guests are really treated
+                                        as special. Almost all the world locations are created over here. The people
+                                        can\'t just take their hands on camera.
+                                        " </p>
+                                    <h6> NEMMARAPARAMESWARAN
+                                        (Hyderabad, India) </h6>
+                                </div>
+
+
+                                <div class="carousel-item">
+                                    <h4> "BAAHUBALI AND BAASHA AND
+                                        CHANDRAMUKHI FILM MADE HERE ONLY" </h4>
+                                    <p> "
+
+                                        Its marvelous place for film shooting with natural gardens and wide roads and
+                                        lawn grassing and beautiful fully loaded place to make movies almost top actors
+                                        of india of both south film industry and bollywood films shooting has took place
+                                        and nice place to visit with family for a vacation its a place not to miss.
+                                        " </p>
+                                    <h6> Arjun T
+                                        (Hyderabad, India) </h6>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4> "Largest FIlm City Studio in The
+                                        World"
+                                    </h4>
+                                    <p> "
+
+                                        A must visit place when you visit Hyderabad. It is spread over 2000 acres of
+                                        land
+                                        and the largest studio in the world.
+                                        One of the most popular places in Hyderabad. There are lot of different sets in
+                                        the
+                                        studio along with amusement park, a butterfly zoo,
+                                        a bird zoo as well as lot of virtual rides. Dance shows and music shows are
+                                        organized here. At the end of the holiday there is a carnival.
+                                        " </p>
+
+                                    <h6> Nisarg Shah (Vadodara,
+                                        Gujarat) </h6>
+                                </div>
+                                <div class="carousel-item">
+                                    <h4> "Best Amusement Park" </h4>
+                                    <p> "
+
+                                        This place is really great. A must visit place in India. This place has a
+                                        Guinness
+                                        world record of the largest film city in the.
+                                        This place gives you lots of memories to take home.There are lots of different
+                                        sets
+                                        in the studio along with amusement park,
+                                        a butterfly zoo, a bird zoo as well as lot of virtual rides. Dance shows and
+                                        music
+                                        shows are organized here.
+
+
+                                        " </p>
+                                    <h6> Neeraja Koona(Vadodara,
+                                        Gujarat) </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prenexticon">
+                            <a class="carousel-control-prev" href="#reviews" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+
+                            <a class="carousel-control-next" href="#reviews" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
